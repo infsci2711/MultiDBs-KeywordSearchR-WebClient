@@ -74,17 +74,17 @@
 					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Add</button>-->
 =======
 
-					<input class="form-control" placeholder="Term" data-bind="textInput: term">
+					<input class="form-control" placeholder="Term" >
 					<!-- /ko -->
 
-					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Search</button>
+					<button type="submit" class="btn btn-default" data-bind="click: findById">Search</button>
 				</form>
 			</br>
 		    	<form class="form-inline">
 					<!-- ko with: newPerson -->
 
 					<input type="hidden" value="test" class="form-control" placeholder="term" data-bind="textInput: term">
-					<input type="hidden" hidden value="test" class="form-control" placeholder="database" data-bind="textInput: databaseName">
+					<input type="hidden" value="test" class="form-control" placeholder="database" data-bind="textInput: databaseName">
 					<input type="hidden" value="test" class="form-control" placeholder="table" data-bind="textInput: tableName">
 					<!-- /ko -->
 
