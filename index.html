@@ -6,6 +6,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="pattern.css" rel="stylesheet">
+
+	<script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+    <script src="components.js"></script>
+    <script src="app.js"></script>
+
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/jquery/jquery.dataTables.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+
+    <script src="js/load-metro.js"></script>
 </head>
 <body style="margin: 60px;">
 	<div class="row">
@@ -13,35 +35,38 @@
 		<div class="col-md-12">
 
 			<div class="page-header">
-			  <h1>MultiDBs-KeywordSearchR-Server <br/><small>(with twitter bootstrap and knockouy.js)</small></h1>
+			  <h1><center>MultiDBs-KeywordSearchR-Server</center> <!--<small>(with twitter bootstrap and knockouy.js)</small>--></h1>
 			</div>
 
-			<div id="personsContainer">
-				<h3>
+			<div center class="container" id="personsContainer">
+				<!--<h3>
 		        	
 		        	There are <span data-bind="text: people().length"></span> terms in our databases.
 		        	<button class="btn btn-default" data-bind="click: findAll">Refresh</button>
 		        	
-		    	</h3>
+		    	</h3>-->
 
-		    	<form class="form-inline">
+		    	<form style="text-align:center" class="form-inline">
 					<!-- ko with: newPerson -->
-
-					<input class="form-control" placeholder="test" data-bind="textInput: term">
+					</br>
+					<input style="width:300px;height:45px" class="form-control" placeholder="keyword" data-bind="value:term">
 					<!-- /ko -->
-
-					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Add</button>
+				</br>
+					</br>
+					<p align="center">
+					<button style="width:300px;height:50px" type="submit" class="btn btn-lg btn-primary btn-block" data-bind="click: findAll">Search</button>
+				</p>
 				</form>
 
-		    	<form class="form-inline">
+		    	<!--<form class="form-inline">
 					<!-- ko with: newPerson -->
 
-					<input class="form-control" placeholder="term" data-bind="textInput: term">
+					<!--<input class="form-control" placeholder="term" data-bind="textInput: term">
 					<input class="form-control" placeholder="database" data-bind="textInput: databaseName">
 					<input class="form-control" placeholder="table" data-bind="textInput: tableName">
-					<!-- /ko -->
+					
 
-					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Add</button>
+					<button type="submit" class="btn btn-default" data-bind="click: addPerson">Add</button>-->
 				</form>
 
 		    	<!-- ko if: people().length > 0 -->

@@ -60,7 +60,7 @@ function PersonsViewModel() {
 		});
 	};
 
-	self.findAll();
+	//self.findAll();
 }
 
 ko.applyBindings(new PersonsViewModel(), $("#personsContainer")[0]);
