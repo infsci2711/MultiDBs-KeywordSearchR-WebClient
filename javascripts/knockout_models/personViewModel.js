@@ -1,5 +1,5 @@
 //var restBaseUrl = "http://52.1.107.126:7654/"; //aws ip
-var restBaseUrl = "http://localhost:7654/";
+var restBaseUrl = "http://52.1.107.126:7654/";
 
 function PersonViewModel(term, databaseName, tableName, columnName) {
 	var self = this;
