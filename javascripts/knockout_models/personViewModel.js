@@ -13,6 +13,7 @@ function PersonViewModel(term, databaseName, tableName, columnName) {
 
 
 function PersonsViewModel() {
+	
 	var self = this;
 	//var termsearch = ko.observable('');
 
@@ -20,8 +21,13 @@ function PersonsViewModel() {
 
 	self.newPerson = ko.observable(new PersonViewModel());
 
-	self.findAll = function() {
+
+	self.currentValue=ko.observable();
+    
+
+	self.findAll = function(form) {
 		$.ajax({
+
 			url: restBaseUrl + "Index",
 			type: 'GET',
 			dataType: 'json',
@@ -31,16 +37,19 @@ function PersonsViewModel() {
 				self.people.removeAll();
 
 				for (var i = 0; i < data.length; i++) {
-					var person = new PersonViewModel(data[i].term, data[i].databaseName, data[i].tableName, data[i].columnName);
+					var person = new PersonViewModel(data[i].term, data[i].databaseName, data[i].tableName);
                    
 					self.people.push(person);
 				}
 			},
 			error: function(data) {
-				alert("Something went wrong while getting Index list. Please try again.");
+				alert("Something went wrong while getting persons list. Please try again.");
 			}
 		});
 	};
+
+
+
 
 	self.findById = function() {
 		var q = document.getElementById('key').value;
@@ -87,5 +96,7 @@ function PersonsViewModel() {
 
 	//self.findAll();
 }
+
+
 
 ko.applyBindings(new PersonsViewModel(), $("#personsContainer")[0]);
