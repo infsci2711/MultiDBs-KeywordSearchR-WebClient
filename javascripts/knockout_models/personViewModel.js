@@ -11,15 +11,22 @@ function PersonViewModel(term, databaseName, tableName) {
 
 
 function PersonsViewModel() {
+	
 	var self = this;
+	//var termsearch = ko.observable('');
 
 	self.people = ko.observableArray();
 
 	self.newPerson = ko.observable(new PersonViewModel());
 
-	self.findAll = function() {
+
+	self.currentValue=ko.observable();
+    
+
+	self.findAll = function(form) {
+		var q = document.getElementById('key').value;
 		$.ajax({
-			url: restBaseUrl + "Person",
+			url: restBaseUrl + "Person/"+q,
 			type: 'GET',
 			dataType: 'json',
 			contentType: "application/json",
@@ -39,6 +46,29 @@ function PersonsViewModel() {
 		});
 	};
 
+	self.findById = function() {
+		$.ajax({
+			url: restBaseUrl + "Person/",
+			type: 'GET',
+			dataType: 'json',
+			contentType: "application/json",
+			crossDomain: true,
+			success: function(data) {
+				self.people.removeAll();
+
+				for (var i = 0; i < data.length; i++) {
+					var person = new PersonViewModel(data[i].term, data[i].databaseName, data[i].tableName);
+                   
+					self.people.push(person);
+				}
+			},
+			error: function(data) {
+				alert("Something went wrong while getting persons list. Please try again.");
+			}
+		});
+	};
+
+    
 
 
 
@@ -62,5 +92,7 @@ function PersonsViewModel() {
 
 	//self.findAll();
 }
+
+
 
 ko.applyBindings(new PersonsViewModel(), $("#personsContainer")[0]);
