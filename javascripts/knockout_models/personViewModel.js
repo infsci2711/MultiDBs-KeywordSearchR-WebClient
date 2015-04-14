@@ -25,7 +25,7 @@ function PersonsViewModel() {
 	self.currentValue=ko.observable();
     
 
-	self.findAll = function(form) {
+	self.findAll = function() {
 		$.ajax({
 
 			url: restBaseUrl + "Index",
@@ -37,7 +37,7 @@ function PersonsViewModel() {
 				self.people.removeAll();
 
 				for (var i = 0; i < data.length; i++) {
-					var person = new PersonViewModel(data[i].term, data[i].databaseName, data[i].tableName);
+					var person = new PersonViewModel(data[i].term, data[i].databaseName, data[i].tableName, data[i].columnName);
                    
 					self.people.push(person);
 				}
