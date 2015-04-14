@@ -1,5 +1,5 @@
 //var restBaseUrl = "http://52.1.107.126:7654/"; //aws ip
-var restBaseUrl = "http://52.1.107.126:7654/";
+var restBaseUrl = "http://localhost:7654/";
 
 function PersonViewModel(term, databaseName, tableName, columnName) {
 	var self = this;
@@ -43,7 +43,7 @@ function PersonsViewModel() {
 				}
 			},
 			error: function(data) {
-				alert("Something went wrong while getting persons list. Please try again.");
+				alert("Something went wrong while getting Index list. Please try again.");
 			}
 		});
 	};
@@ -89,7 +89,7 @@ function PersonsViewModel() {
 				//self.newPerson(new PersonViewModel());
 			},
 			error: function(data) {
-				alert("Something went wrong while adding new person. Please try again.");
+				alert("Something went wrong while adding new Index. Please try again.");
 			}
 		});
 	};
