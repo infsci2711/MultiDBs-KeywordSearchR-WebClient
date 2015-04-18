@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+					<!----start-top-nav-script---->
+</head>
+<body>
+<!--header-->
+	<div class="header">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.jpg" alt="" ></a>
+				</div>
+				<div class="top-nav">
+				<span class="menu"> </span>
+					<ul>
+						<li class="index.html" ><a href="index.html" class="scroll">Home</a></li>
+						<li><a href="description.html" class="scroll"> Description</a></li>
+						<li><a href="api.html" class="scroll">Api</a></li>
+					</ul>
+					<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+				</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!---->
+
+	<!--content-->
+	<div class="content">
+		<div class="about" id="about">
+			<div class="about-left">
+					<h3>REST API documentation Page</h3>
+					<p>This is page includes Very (really super very) detailed documentation of your REST API:</p>
+					<p>It describe each API service with the following aspects: what it does , path ,method,input params,output params</p>
+
+			</div>
+			<div class="about-right">
+				<img class="img-responsive" src="images/pi.jpg" alt="" />
+			</div>
+			<div class="clearfix"> </div>
+			<!---->
+
+				<!---->
+				 <script type="text/javascript" src="js/circles.js"></script>
+					         <script>
+								var colors = [
+										['', '#19c9cb'], ['', '#fa5b3c'], ['', '#ffbf12'], ['', '#f06eaa']
+									];
+								for (var i = 1; i <= 5; i++) {
+									var child = document.getElementById('circles-' + i),
+										percentage = 50 + (i * 10);
+
+									Circles.create({
+										id:         child.id,
+										percentage: percentage,
+										radius:     115,
+										width:      10,
+										number:   	percentage / 10,
+										text:       '%',
+										colors:     colors[i - 1]
+									});
+								}
+
+				</script>
+				<!--//-->
+				</div>
+			</div>
+		</div>
+		<!---->
+
+		<!---->
+		<div class="services" >
+			<div class="container">
+				<div class="services-in">
+					<h3>some facts</h3>
+				</div>
+				<div class="service-grids ">
+					<div class="col-md-4 service-grid">
+							<a href="#"><span> </span></a>
+							<h5>API 1</h5>
+							<P>Description here</P>
+						</div>
+					<div class="col-md-4 service-grid">
+							<a href="#"><span class="low"> </span></a>
+							<h5>API 2</h5>
+							<P>Description here</P>						</div>
+						<div class="col-md-4 service-grid">
+							<a href="#"><span class="word-press"> </span></a>
+							<h5>API 3</h5>
+							<P>Description here</P>						</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="service-grids ">
+					<div class="col-md-4 service-grid">
+							<a href="#"><span class="seo"> </span></a>
+							<h5>API 4</h5>
+							<P>Description here</P>						</div>
+					<div class="col-md-4 service-grid">
+							<a href="#"><span class="hosting"> </span></a>
+							<h5>API 5</h5>
+							<P>Description here</P>						</div>
+						<div class="col-md-4 service-grid">
+							<a href="#"><span class="advertising"> </span></a>
+							<h5>API 6</h5>
+							<P>Description here</P>						</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+
+		<!---->
+		<div class="fact" id="services">
+			<div class="container">
+				<div class="some-in">
+					<h3>some nerdy facts</h3>
+				</div>
+				<div class="fact-grids ">
+					<div class="col-md-3 fact-grid">
+							<a href="#"><span> </span></a>
+							<b>1</b>
+							<p>project completed</p>
+						</div>
+
+						<div class="col-md-3 fact-grid">
+							<a href="#"><span class="smile"> </span></a>
+								<b>6</b>
+								<p>members</p>
+						</div>
+
+					<div class="col-md-3 fact-grid">
+						<a href="#"><span class="arrow"> </span></a>
+							<b>3725</b>
+							<p>lines of code</p>
+						</div>
+
+					<div class="col-md-3 fact-grid">
+						<a href="#"><span class="clock"> </span></a>
+							<b>233</b>
+							<p>hours spent</p>
+						</div>
+
+
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
