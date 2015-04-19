@@ -75,7 +75,8 @@ function PersonsViewModel() {
 		});
 	};
 
-
+//test function
+/*
 	self.addPerson = function() {
 		$.ajax({
 			url: restBaseUrl + "Index",
@@ -93,7 +94,7 @@ function PersonsViewModel() {
 			}
 		});
 	};
-
+*/
 	//self.findAll();
 }
 
